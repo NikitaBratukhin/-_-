@@ -12,3 +12,26 @@ k += 1
 pi = pi * Decimal(10005).sqrt() / 4270934400
 pi = pi ** (-1)
 return pi
+
+n = int(input())
+getcontext().prec = n + 1
+print(pi(n))
+
+def mulrange (x):
+mulrange_list =[]
+k= 0
+for k in range (1, x+1):
+if k % 3 == 0:
+print(k, end=',')
+mulrange_list.append(k)
+k+=1
+elif k % 5== 0:
+print(k, end=',')
+mulrange_list.append(k)
+k += 1
+else:
+k+=1
+return print((sum(mulrange_list)))
+
+x= int(input())
+mulrange(x)
